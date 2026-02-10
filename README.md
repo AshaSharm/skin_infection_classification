@@ -1,12 +1,12 @@
-🩺 Skin Lesion Classification & Explainability System
-📌 Overview
+# 🩺 Skin Lesion Classification & Explainability System
+## 📌 Overview
 
 This project implements an end-to-end deep learning system for skin lesion classification using dermoscopic images.
 The system is designed as a clinical decision-support tool and provides:
 
 Automatic skin lesion classification
 
-Model confidence score
+### Model confidence score
 
 Lesion localization using Grad-CAM
 
@@ -18,7 +18,7 @@ Backend (training & evaluation) → Jupyter Notebook
 
 Frontend (inference & UI) → Streamlit application
 
-🧠 Model Summary
+## Model Summary
 
 Architecture: EfficientNet-B0
 
@@ -44,7 +44,7 @@ Recall: 85.78%
 
 F1-score: 85.50%
 
-📁 Project Structure
+## Project Structure
 
 Skin_infection/
 ├── Skin_Lesion_Classification.ipynb (Backend: training, evaluation, Grad-CAM)
@@ -53,8 +53,8 @@ Skin_infection/
 ├── requirements.txt (Python dependencies)
 └── README.md (Project documentation)
 
-⚙️ Setup Instructions
-1️⃣ Create and Activate Virtual Environment
+## Setup Instructions
+### 1️⃣ Create and Activate Virtual Environment
 
 Windows
 python -m venv venv
@@ -64,12 +64,12 @@ macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 
 pip install --upgrade pip
 pip install -r requirements.txt
 
-🧪 Backend: Training & Evaluation (Jupyter Notebook)
+#### Backend: Training & Evaluation (Jupyter Notebook)
 
 File:
 Skin_Lesion_Classification.ipynb
@@ -100,7 +100,7 @@ Open Skin_Lesion_Classification.ipynb and run all cells from top to bottom.
 
 Training is optional if best_model.pth is already available.
 
-🖥️ Frontend: Streamlit User Interface
+#### Frontend: Streamlit User Interface
 
 File:
 app.py
@@ -126,7 +126,7 @@ streamlit run app.py
 Then open in browser:
 http://localhost:8501
 
-🔄 Inference Workflow
+## Inference Workflow
 
 Upload a dermoscopic image
 
@@ -144,14 +144,14 @@ Grad-CAM heatmap
 
 Overlay visualization
 
-🔍 Explainability (Grad-CAM)
+## Explainability (Grad-CAM)
 
 Grad-CAM (Gradient-weighted Class Activation Mapping) is used to highlight image regions that most influence the model’s predictions.
 This improves transparency and supports clinical interpretability.
 
 Grad-CAM visualizations are qualitative and may vary slightly due to preprocessing and visualization scaling.
 
-🧠 Design Decisions
+## Design Decisions
 
 EfficientNet-B0 chosen for strong performance with fewer parameters
 
@@ -163,7 +163,7 @@ Streamlit chosen for rapid and lightweight UI development
 
 Clear separation between backend (.ipynb) and frontend (app.py)
 
-📌 Final Note
+## Final Note
 
 All training, evaluation, and explainability logic is implemented in Skin_Lesion_Classification.ipynb.
 The user-facing interface is implemented using Streamlit in app.py.
