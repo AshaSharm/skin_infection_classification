@@ -1,6 +1,6 @@
-# Skin Lesion Classification & Explainability System
+# 🩺 Skin Lesion Classification & Explainability System
 
-## Overview
+## 📌 Overview
 This project implements an **end-to-end deep learning system** for skin lesion classification using dermoscopic images.  
 The system is designed as a **clinical decision-support tool** and provides:
 
@@ -15,7 +15,7 @@ The project follows industry-standard machine learning practices with a clear se
 
 ---
 
-## Model Summary
+## 🧠 Model Summary
 - **Architecture:** EfficientNet-B0  
 - **Pretraining:** ImageNet  
 - **Classes:**  
@@ -32,9 +32,7 @@ The project follows industry-standard machine learning practices with a clear se
 
 ---
 
-##  Project Structure
-
-
+## 📁 Project Structure
 
 Skin_infection/
 │
@@ -47,7 +45,7 @@ Skin_infection/
 
 ---
 
-##  Setup Instructions
+## ⚙️ Setup Instructions
 
 ### 1️⃣ Create and Activate Virtual Environment
 
@@ -55,21 +53,16 @@ Skin_infection/
 ```bash
 python -m venv venv
 venv\Scripts\activate
-
 macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
-
-### 2️⃣ Install Dependencies
+2️⃣ Install Dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
-
-Backend: Training & Evaluation (Jupyter Notebook)
+🧪 Backend: Training & Evaluation (Jupyter Notebook)
 File
 Skin_Lesion_Classification.ipynb
-
 What this notebook does:
-
 Loads the ISIC 2019 dataset
 
 Applies preprocessing and data augmentation
@@ -78,7 +71,7 @@ Trains EfficientNet-B0 using transfer learning
 
 Evaluates model on validation and test sets
 
-Computes accuracy, precision, recall, F1-score
+Computes accuracy, precision, recall, and F1-score
 
 Generates confusion matrix
 
@@ -88,23 +81,17 @@ Saves the best model as best_model.pth
 
 How to run:
 jupyter notebook
-
-
 Then open:
 
 Skin_Lesion_Classification.ipynb
-
-
 Run all cells top to bottom.
 
 ⚠️ Training is optional if best_model.pth is already available.
 
-Frontend: Streamlit User Interface
+🖥️ Frontend: Streamlit User Interface
 File
 app.py
-
 Features:
-
 Upload dermoscopic image
 
 Display resized input image
@@ -121,21 +108,17 @@ Overlay of heatmap on original image
 
 Run the Streamlit App
 streamlit run app.py
-
-
 Then open the displayed URL in your browser:
 
 http://localhost:8501
-
-Inference Workflow (Frontend)
-
+🔄 Inference Workflow (Frontend)
 Upload a dermoscopic image
 
 Image is preprocessed using the same pipeline as training
 
 Model predicts lesion class and confidence
 
-Grad-CAM highlights lesion region
+Grad-CAM highlights the lesion region
 
 Results are visualized side-by-side:
 
@@ -145,21 +128,23 @@ Grad-CAM heatmap
 
 Overlay visualization
 
-Explainability (Grad-CAM)
-
+🔍 Explainability (Grad-CAM)
 Grad-CAM (Gradient-weighted Class Activation Mapping) is used to:
 
 Highlight image regions influencing model decisions
 
 Improve transparency and clinical interpretability
 
-Design Decisions
+Support trust in predictions
 
+Grad-CAM visualizations are qualitative and may vary slightly due to preprocessing and visualization scaling.
+
+🧠 Design Decisions
 EfficientNet-B0 chosen for strong performance with fewer parameters
 
 Transfer learning used to improve convergence
 
-Grad-CAM selected instead of object detection to avoid bounding-box annotation requirements
+Grad-CAM used instead of object detection to avoid bounding-box annotation requirements
 
 Streamlit used for rapid, lightweight UI development
 
