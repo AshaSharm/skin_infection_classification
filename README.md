@@ -60,7 +60,7 @@ macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
 
